@@ -18,7 +18,7 @@ rule "ACME-Principal"
 	when
 		the lender is "ACME Mortgage"
 		and there is an application
-		- with a Principal that is less than 50000
+		//- with a Principal that is less than 50000
 	then
 		reject the application because "a Principal of at least $50,000 is required"
 end
@@ -27,7 +27,7 @@ rule "ACME-NumberOfUnits"
 	when
 		the lender is "ACME Mortgage"
 		and there is an application
-		- with a Number of Units greater than 4
+		//- with a Number of Units greater than 4
 	then
 		reject the application because "the number of units must not be greater than 4"
 end
@@ -36,17 +36,18 @@ rule "ACME-OneUnitPrincipal"
 	when
 		the lender is "ACME Mortgage"
 		and there is an application
-		- with a Number of Units equal to 1
-		- with a Principal that is equal or greater than 203150
+		//- with a Number of Units equal to 1
+		//- with a Principal that is equal or greater than 203150
 	then
 		reject the application because "the principal for a 1 unit property must be no more than $203,150"
 end
-
+/*
 rule "ACME-PrincipalMultipleOf50"
 	when
 		the lender is "ACME Mortgage"
-		and there is an application
-		- with a Principal that is not a multiple of 50
+		//and there is an application
+		//- with a Principal that is not a multiple of 50
 	then
 		reject the application because "a principal that is a multiple of $50 is required"
 end
+*/
