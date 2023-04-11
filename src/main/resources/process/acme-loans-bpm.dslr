@@ -14,7 +14,7 @@ rule "ACME-Fico"
 	then
 		reject the application because "a FICO score of at least 680 is required"
 end
-
+/*
 rule "ACME-Principal"
     ruleflow-group "qualification"
 	when
@@ -173,6 +173,7 @@ rule "ACME-RecommendACosigner"
 	then
 	    recommend "that you get a cosigner"
 end
+*/
 
 function int yearsOfAge(Date dob) {
    Calendar calendar = Calendar.getInstance();
